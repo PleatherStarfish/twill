@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+.eslintrc
+node_modules
+
+# exclude everything
+public/*
+
+# exception to the rule
+!public/.gitkeep
