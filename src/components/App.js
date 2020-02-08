@@ -1,5 +1,4 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.css'
 import { StateProvider } from "../context/providers/StateProvider";
 import reducer from "../context/reducers/stateReducer";
 import initialState from "../context/state/initialState";
