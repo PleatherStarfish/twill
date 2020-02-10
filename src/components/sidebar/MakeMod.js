@@ -24,7 +24,7 @@ const MakeModButtons = () => {
               module: x.target.id
             })}
         >
-          add Sine Osc
+          Sine Osc
         </span>
       </Dropdown.Item>
       <Dropdown.Item className="btn btn-primary btn-block" href="">
