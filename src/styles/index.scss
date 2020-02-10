@@ -50,6 +50,9 @@ h1 {
     background-color: #fdf6e3;
     border-radius: 15px;
   }
+  #add {
+    width: 60vw;
+  }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .sidebar {
@@ -60,24 +63,35 @@ h1 {
     height: calc(75vh - 60px);
     margin-top: 15px;
   }
+  #add {
+    width: 30vw;
+  }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .sidebar, .canvas {
     height: calc(100vh - 90px);
+  }
+  #add {
+    width: 15vw;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .sidebar, .canvas {
     height: calc(100vh - 90px);
   }
+  #add {
+    width: 10vw;
+  }
 }
 @media (min-width: 1200px) {
   .sidebar, .canvas {
     height: calc(100vh - 90px);
   }
+  #add {
+    width: 10vw;
+  }
 }
 #add {
   background-color: #2aa198 !important;
   border-color: #2aa198 !important;
-  width: 120px !important;
 }

@@ -1,11 +1,10 @@
 import React from "react";
-import { DropdownButton, Dropdown } from "react-bootstrap";
+import {DropdownButton, Dropdown} from "react-bootstrap";
 import uniqid from "uniqid";
 import { useModuleListState } from "../../context/providers/moduleListProvider";
 
 const MakeModButtons = () => {
   const [module, dispatchToModuleList] = useModuleListState();
-  console.log(module);
 
   return (
     <DropdownButton id="add" title="CREATE">
@@ -13,7 +12,6 @@ const MakeModButtons = () => {
         <span
           id="sineOsc"
           role="button"
-          styling="link"
           tabIndex={0}
           onClick={x =>
             dispatchToModuleList({
@@ -31,22 +29,21 @@ const MakeModButtons = () => {
       </Dropdown.Item>
       <Dropdown.Item className="btn btn-primary btn-block" href="">
         <span
-          id="sineOsc"
+          id="squareOsc"
           role="button"
-          styling="link"
           tabIndex={0}
           onClick={x =>
-            dispatchToModuleList({
-              type: "REMOVE_MODULE",
-              module: { type: x.target.id, id: module[0].id }
-            })}
+              dispatchToModuleList({
+                  type: "ADD_MODULE",
+                  module: { type: x.target.id, id: uniqid() }
+              })}
           onKeyDown={x =>
-            dispatchToModuleList({
-              type: "REMOVE_MODULE",
-                module: { type: x.target.id, id: module[0].id }
-            })}
+              dispatchToModuleList({
+                  type: "ADD_MODULE",
+                  module: x.target.id
+              })}
         >
-          remove Sine Osc
+          Square Osc
         </span>
       </Dropdown.Item>
     </DropdownButton>
